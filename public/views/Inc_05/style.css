@@ -1,0 +1,7 @@
+.container-fluid {
+  max-width: 25%;
+}
+.title {
+  background-color: rgb(120, 200, 200);
+  color: rgb(255, 250, 0);
+}
