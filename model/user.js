@@ -7,4 +7,19 @@ let add = async (user) => {
     );
 };
 
+let login = async (user) => {
+    let result = await sequelize.query(
+      `SELECT * FROM users WHERE password = '${user.password}' AND email = '${user.email}'`
+    );
+    
+    if ( result[0] ) {
+        return result;
+    } else {
+        return {
+            error: 'Usuario o contraseña incorrecta'
+        }
+    }
+  };
+
 module.exports.add = add;
+module.exports.login = login;

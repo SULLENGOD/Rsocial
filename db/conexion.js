@@ -1,12 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('curso_tecla', 'luis', '12345', {
+const sequelize = new Sequelize('curso_tecla', 'root', null, {
     dialect: 'mysql',
-    host: '192.168.64.2'
+    host: 'localhost'
 })
 
-//sequelize.query('SELECT * FROM users')
-
-
-
-module.exports = sequelize;
+module.exports = sequelize; 
